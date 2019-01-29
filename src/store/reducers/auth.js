@@ -1,11 +1,14 @@
-export default (state={},action)=>{
-switch(action.type){
-    case 'LOGIN': return {
-        uid:action.uid
-    };
+export default (state = {}, action) => {
+    switch (action.type) {
+        case 'LOGIN':
+            return {
+                uid: action.uid
+            };
 
-    case 'LOGOUT': return {};
+        case 'LOGOUT':
+            return {};
 
-    default: return state;
-}
+        default:
+            return state;
+    }
 };

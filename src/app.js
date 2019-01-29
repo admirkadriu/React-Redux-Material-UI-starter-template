@@ -1,16 +1,17 @@
 import React from 'react';
 import {render} from 'react-dom';
-import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import { Provider } from 'react-redux';
-import HeaderAppBar from './components/Header';
-import AppRouter from './routers/AppRouter';
-import './styles/styles.css';
-import {theme} from './theme/theme';
+import { MuiThemeProvider } from '@material-ui/core/styles';
+
+import AppRouter from './routers/AppRouter'
 import configureStore from './store/config/configureStore';
-import {login,logout} from './store/actions/auth';
+import {logout} from './store/actions/auth';
+import {theme} from './theme/theme';
+import './styles/styles.css';
 
 
 const store = configureStore();
+
 store.subscribe(()=>{
   console.log(store.getState());
 });

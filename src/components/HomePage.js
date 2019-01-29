@@ -8,14 +8,8 @@ import Snackbar from '@material-ui/core/Snackbar';
 import IconButton from '@material-ui/core/IconButton';
 import CloseIcon from '@material-ui/icons/Close';
 import Typography from '@material-ui/core/Typography';
-import fusioncharts from 'fusioncharts';
-// Load the charts module
-import charts from 'fusioncharts/fusioncharts.charts';
-import ReactFC from 'react-fusioncharts';
 
 
-// Pass fusioncharts as a dependency of charts
-charts(FusionCharts)
 
 
 
@@ -122,11 +116,9 @@ const HomePage = () => (
             </Paper>
         </Grid>
         <Grid item xs={6}>
-          <ReactFC {...chartConfigs} />
          
         </Grid>
         <Grid item xs={6}>
-          <ReactFC {...pieChartConfig}/>
         </Grid>
         </Grid>
   </React.Fragment>
